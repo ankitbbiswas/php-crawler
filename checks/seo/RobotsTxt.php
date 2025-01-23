@@ -10,7 +10,7 @@ function checkRobotsTxt($url) {
 
     // Check if the content was successfully retrieved
     if ($sourceCode === false) {
-        return "Failed to retrieve robots.txt for $url\n";
+        return "-";
         return false; // Indicate failure to fetch robots.txt
     }
 
