@@ -1,0 +1,33 @@
+[2024-12-14 12:52:58] Crawler started.
+[2024-12-14 12:53:42] Crawler started.
+[2024-12-14 12:56:10] Crawler started.
+[2024-12-14 12:57:27] Crawler started.
+[2024-12-14 12:58:58] Crawler started.
+[2024-12-14 13:00:00] Crawler started.
+[2024-12-14 13:00:21] Crawler started.
+[2024-12-14 13:01:43] Crawler started.
+[2024-12-14 13:04:13] Crawler started.
+[2024-12-14 17:19:57] Crawler started.
+[2024-12-14 17:26:44] Crawler started.
+[2024-12-14 17:28:08] Crawler started.
+[2024-12-14 17:31:11] Failed to fetch source code for URL: bbbank.de
+[2024-12-14 17:32:06] Failed to fetch source code for URL: vb-flein-talheim.de
+[2024-12-14 17:33:31] Failed to fetch source code for URL: vb-hohenlohe.de
+[2024-12-14 17:35:54] Failed to fetch source code for URL: entruempelung-schaefer.de
+[2024-12-14 17:36:34] Failed to fetch source code for URL: befreecamper.com
+[2024-12-14 17:37:41] Failed to fetch source code for URL: santegra-shop.de
+[2024-12-14 17:37:41] Failed to fetch source code for URL: nachhilfe-lernbegleitung.de
+[2025-01-23 15:20:43] Crawler started.
+[2025-01-23 15:40:17] Crawler started.
+[2025-01-23 15:41:35] Crawler started.
+[2025-01-23 15:42:56] Failed to fetch source code for URL: iq-bernd-mueller-eppingen.de
+[2025-01-23 15:43:15] Crawler started.
+[2025-01-23 15:44:35] Failed to fetch source code for URL: iq-bernd-mueller-eppingen.de
+[2025-01-23 15:46:41] Failed to fetch source code for URL: bbbank.de
+[2025-01-23 15:47:58] Failed to fetch source code for URL: vb-flein-talheim.de
+[2025-01-23 16:02:35] Crawler started.
+[2025-01-23 16:04:10] Failed to fetch source code for URL: iq-bernd-mueller-eppingen.de
+[2025-01-23 16:08:54] Crawler started.
+[2025-01-23 16:18:19] Crawler started.
+[2025-01-23 16:32:35] Crawler started.
+[2025-01-23 16:39:33] Failed to fetch source code for URL: iq-bernd-mueller-eppingen.de
