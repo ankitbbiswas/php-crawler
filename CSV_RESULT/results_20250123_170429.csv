@@ -1,7 +1,0 @@
-URL,"IP Address","Crawlability Status","Original URL Status","https:// Status","http:// Status","https://www. Status","https://www. Status",CheckImprint,Checkdataprivacy,CheckForTracking,Framework,Backups,CSP,CsrfProtection,DirectoryTraversal,FileInclusion,HSTS,OpenPorts,OutdatedLibraries,ReferrerPolicy,SqlInjectionRisk,SRI,Ssl,TwoFactorAuth,XContentTypeOptions,XFrameOptions,XMLRPC,XssRisk,Pagespeed,CanonicalTags,HeaderTagsCount,HreflangTags,HTTPS,MetaDescription,MobileFriendly,NAPConsistency,RobotsTxt,SecurityCertificate,Sitemap,StructuredData,TitleTag
-ekwz.de,192.162.85.152,CRAWLABLE,301,301,301,200,302,Yes,-,-,-,-,"Number of header tags: 6",-,-,Yes,-,-,-,-,-,-,-,-,-,-,-,Yes,"No score
-",-,"Number of header tags: 6",-,-,-,Yes,Yes,"Failed to retrieve robots.txt for ekwz.de
-",Yes,-,-,Yes
-diakonie-darmstadt.de,78.46.70.216,CRAWLABLE,200,200,200,200,200,Yes,-,-,-,-,"Number of header tags: 1",-,-,Yes,-,-,-,-,-,-,-,-,-,-,-,Yes,"No score
-",-,"Number of header tags: 1",-,-,-,Yes,Yes,"Failed to retrieve robots.txt for diakonie-darmstadt.de
-",Yes,-,-,Yes

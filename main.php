@@ -110,7 +110,7 @@ function main() {
     // Write header to the result CSV
     fputcsv($csvResultFile, [
         'URL', 'IP Address', 'Crawlability Status', 'Original URL Status', 'https:// Status', 'http:// Status',
-        'https://www. Status', 'https://www. Status', 'CheckImprint', 'Checkdataprivacy', 'CheckForTracking',
+        'https://www. Status', 'http://www. Status', 'CheckImprint', 'Checkdataprivacy', 'CheckForTracking',
         'Framework', 'Backups', 'CSP', 'CsrfProtection', 'DirectoryTraversal', 'FileInclusion',
         'HSTS', 'OpenPorts', 'OutdatedLibraries', 'ReferrerPolicy', 'SqlInjectionRisk', 'SRI', 'Ssl',
         'TwoFactorAuth', 'XContentTypeOptions', 'XFrameOptions', 'XMLRPC', 'XssRisk', 'Pagespeed',

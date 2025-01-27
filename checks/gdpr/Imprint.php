@@ -11,33 +11,41 @@ function CheckImprint($sourceCode) {
 
     // German variations of "Impressum"
     $imprintKeywords = [
-        'impressum',
-        'impressums',   
-        'impr.',     
-        'impressum:',   
-        'impressum -',  
-        'impressum –',       
-        'impressum |',  
-        'impressum/',   
-        '[impressum]',  
-        '(impressum)',  
-        'impressum.htm',     
-        'impressum.html',    
-        'impressum.php',    
-        'impressum.php?'     
+        'impressum',       // Core keyword
+        'impr.',           // Abbreviation
+        'impressum:',      // Variations with special characters
+        'impressum -',
+        'impressum –',
+        'impressum |',
+        'impressum/',
+        '[impressum]',     // Variations with brackets
+        '(impressum)',
+        'impressum.htm',   // File extensions
+        'impressum.html',
+        'impressum.php',
+        'impressum.php?',
     ];
 
-    // Search for keywords in the source code
+    // Check for "Impressum" inside links or text content
     foreach ($imprintKeywords as $keyword) {
-        if (strpos($sourceCodeLower, $keyword) !== false) {
-            return 'Yes'; // Imprint found
+        // Look for keywords inside href attributes of <a> tags
+        $hrefPattern = '/<a[^>]*href=["\'][^"\']*' . preg_quote($keyword, '/') . '[^"\']*["\'][^>]*>/i';
+        if (preg_match($hrefPattern, $sourceCodeLower)) {
+            return 'Yes'; // Found keyword in a link
+        }
+
+        // Look for keywords in the visible text of <a> tags
+        $textPattern = '/<a[^>]*>(.*?)' . preg_quote($keyword, '/') . '(.*?)<\/a>/i';
+        if (preg_match($textPattern, $sourceCodeLower)) {
+            return 'Yes'; // Found keyword in the text of a link
         }
     }
 
-    // Check for imprint specifically at the end (e.g., in footer)
-    if (preg_match('/impressum/i', substr($sourceCode, -500))) {
+    // Check for "Impressum" specifically near the end (e.g., in footer)
+    $footerText = substr($sourceCodeLower, -1000); // Check the last 1000 characters
+    if (strpos($footerText, 'impressum') !== false) {
         return 'Yes'; // Imprint found in the footer
     }
 
-    return '-'; // Imprint not found
+    return 'No'; // Imprint not found
 }
