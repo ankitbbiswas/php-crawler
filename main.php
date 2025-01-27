@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 // Include other files
 require_once 'checks/basics/frameworks.php';
+require_once 'checks/basics/source_code.php';
 
 // Include File Operations (FILEOPS) related files
 require_once 'fileops/checkCsvInputFile.php';
@@ -115,7 +116,7 @@ function main() {
         'HSTS', 'OpenPorts', 'OutdatedLibraries', 'ReferrerPolicy', 'SqlInjectionRisk', 'SRI', 'Ssl',
         'TwoFactorAuth', 'XContentTypeOptions', 'XFrameOptions', 'XMLRPC', 'XssRisk', 'Pagespeed',
         'CanonicalTags', 'HeaderTagsCount', 'HreflangTags', 'HTTPS', 'MetaDescription', 'MobileFriendly',
-        'NAPConsistency', 'RobotsTxt', 'SecurityCertificate', 'Sitemap', 'StructuredData', 'TitleTag'
+        'NAPConsistency', 'RobotsTxt', 'SecurityCertificate', 'Sitemap', 'StructuredData', 'TitleTag', 'Code-Size'
     ]);
 
     // Crawl each URL
@@ -128,6 +129,7 @@ function main() {
 
         // Check HTTP Statuses for different URL variations
         $httpStatuses = CheckHTTP($url);
+        $codestatus = getStringSizeInMB($url);
 
         // Extract statuses for different URL variations
         $originalStatus = isset($httpStatuses['Original URL']) ? $httpStatuses['Original URL'] : 'Error';
@@ -185,7 +187,7 @@ function main() {
             $framework, $checkBackups, $headerTagsCountCheck, $hreflangTagsCheck, $metaDescriptionCheck, $mobileFriendlyCheck,
             $hsts, $OpenPorts, $OutdatedLibraries, $ReferrerPolicy, $SqlInjectionRisk, $SRI, $Ssl, $TwoFactorAuth, $XContentTypeOptions,
             $XFrameOptions, $XMLRPC, $XssRisk, $getpagespeed, $CanonicalTags, $HeaderTagsCount, $HreflangTags, $HTTPS, $MetaDescription,
-            $MobileFriendly, $NAPConsistency, $RobotsTxt, $SecurityCertificate, $Sitemap, $StructuredData, $TitleTag
+            $MobileFriendly, $NAPConsistency, $RobotsTxt, $SecurityCertificate, $Sitemap, $StructuredData, $TitleTag, $codestatus
         ]);
     }
 
